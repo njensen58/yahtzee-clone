@@ -2,6 +2,7 @@ import React from 'react';
 import UpperSection from './UpperSection';
 import LowerSection from './LowerSection';
 import GameRules from './GameRules';
+import FaQuest from 'react-icons/lib/fa/question-circle-o';
 
 class Scorecard extends React.Component {
     constructor(){
@@ -27,7 +28,7 @@ class Scorecard extends React.Component {
         return (
             <div className="scorecardContainer">
                 <div className="howToPlayIcon" onClick={this.toggleIsLearning}>
-                    <span><i className="ion-help-circled questionIcon"></i></span>
+                    <span><i className="questionIcon"><FaQuest /></i></span>
                 </div>
                 <div style={howToPlay} onClick={this.toggleIsLearning}>
                     <GameRules />
