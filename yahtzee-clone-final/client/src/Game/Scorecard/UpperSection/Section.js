@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { disallowSelection } from '../../../redux/controls'
+import { disallowSelection } from '../../../redux/controls';
+import FaChecked from 'react-icons/lib/fa/check-circle';
 
 
 class Section extends React.Component{
@@ -96,7 +97,7 @@ class Section extends React.Component{
                     <div className="tileScreenExpand">
                         {this.state.isSelected && !this.state.isConfirmed ?
                         <div className="upperSaveBtnDiv">
-                            <button onClick={this.handleConfirm}><i className="ion-checkmark-circled icon"></i></button>
+                            <button onClick={this.handleConfirm}><i className="icon"><FaChecked /></i></button>
                         </div>
                         :
                         <div>

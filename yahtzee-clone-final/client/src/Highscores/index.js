@@ -2,6 +2,9 @@ import React from 'react';
 import Highscore from './Highscore';
 import { connect } from 'react-redux';
 import { getHigh } from '../redux/highscores';
+import FagitI from 'react-icons/lib/fa/github';
+import FalinkI from 'react-icons/lib/fa/linkedin-square';
+import FainstaI from 'react-icons/lib/fa/instagram';
 
 class Highscores extends React.Component {
     constructor(){
@@ -36,9 +39,9 @@ class Highscores extends React.Component {
                 <div className="followMeDiv">
                     <h3>-Follow me-</h3>
                     <div>
-                        <a href="https://github.com/njensen58"><i className="ion-social-github socialIconG"></i></a>
-                        <a href="https://linkedin.com/in/natej58"><i className="ion-social-linkedin socialIconL"></i></a>
-                        <a href="https://www.instagram.com/nate.sj/"><i className="ion-social-instagram socialIconI"></i></a>
+                        <a href="https://github.com/njensen58"><i className="socialIconG"><FagitI /></i></a>
+                        <a href="https://linkedin.com/in/natej58"><i className="socialIconL"><FalinkI /></i></a>
+                        <a href="https://www.instagram.com/nate.sj/"><i className="socialIconI"><FainstaI /></i></a>
                     </div>
                 </div>
                 <div className="aboutDiv">

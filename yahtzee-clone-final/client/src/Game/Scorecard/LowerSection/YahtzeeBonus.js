@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { disallowSelection } from '../../../redux/controls'
 import { isDoneSelecting } from '../../../redux/controls';
 import { updateYahtzeeBonus } from '../../../redux/scorecard';
+import FaChecked from 'react-icons/lib/fa/check-circle';
 
 
 class YahtzeeBonus extends React.Component{
@@ -97,7 +98,7 @@ class YahtzeeBonus extends React.Component{
                     </div>
                     {this.state.isSelected ?
                         <div className="lowerSaveBtnDiv">
-                            <button onClick={this.updateYahtzeeBonusScore}><i className="ion-checkmark-circled icon"></i></button>
+                            <button onClick={this.updateYahtzeeBonusScore}><i className="icon"><FaChecked /></i></button>
                         </div>
                     :
                         <div>

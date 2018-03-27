@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Fabars from 'react-icons/lib/fa/bars';
+import Famin from 'react-icons/lib/fa/minus';
 
 class Navbar extends React.Component {
     constructor(){
@@ -31,7 +33,7 @@ class Navbar extends React.Component {
             { this.state.expandedNav ?
                 <div>
                 <span onClick={this.handleExpandNav}>
-                    <i className="ion-ios-minus-empty navicon"></i>
+                    <i className="navicon"><Famin /></i>
                 </span>
                     <div style={dropdownMenu} onClick={this.handleExpandNav}>
                         <Link to="/">Home</Link>
@@ -41,7 +43,7 @@ class Navbar extends React.Component {
                 </div>
             :
                 <span onClick={this.handleExpandNav}>
-                    <i className="ion-navicon navicon"></i>
+                    <i className="navicon"><Fabars /></i>
                 </span>
             }
 
