@@ -1,0 +1,161 @@
+.adminPageContainer {
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    background-color: #EAE7DC;
+}
+
+.adminPageContainer > div:nth-child(1) button {
+    margin-top: 30px;
+    background-color: #333;
+    color: white;
+    border: none;
+    font-size: 15px;
+    height: 100%;
+    transition: .4s;
+    border-radius: 2px;
+}
+
+.activeBtn {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    height: 100%;
+    width: 20px;
+}
+
+.activeBtn button{
+    height: 100%;
+    text-align: left;
+    grid-column: 1;
+    margin-right: 5px;
+}
+
+
+.adminPageContainer > div:nth-child(1) button:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.adminHighscoresContainer {
+    grid-column: 1 / 3;
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+    
+}
+
+.adminHighscoreDiv {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 1fr 4fr 2fr;
+    background-color: #333;
+    margin: 2px 0;
+    border-radius: 4px;
+}
+
+.adminNameDiv,
+.adminScoreDiv {
+    display: flex;
+    align-items: center;
+}
+
+.adminScoreDiv div {
+    display: flex;
+    align-items: center;
+}
+
+.adminScoreDiv {
+    justify-content: flex-end;
+    grid-column: 3;
+    padding-right: 20px;
+}
+
+.adminHighscoreDiv button {
+    margin: 0;
+    background-color: #333;
+    border: 1px solid #333;
+    color: white;
+    font-size: 20px;
+}
+
+.adminHighscoreDiv h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    color: white;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.adminToggleIcon {
+    color: white;
+}
+
+.adminToggleBtn {
+    border-radius: 4px;
+}
+
+.adminNameInput {
+    width: 100px;
+}
+
+.adminScoreInput {
+    width: 50px;
+}
+
+.trashIconDiv {
+    grid-column: -1;
+    grid-row: 1;
+}
+
+.trashIcon {
+    transition: .3s;
+}
+
+.trashIcon:hover {
+    color: firebrick;
+}
+
+.confirmEditBtn {
+
+}
+
+.confirmEditIcon {
+    color: #EAE7DC;
+    transition: .3s;
+}
+
+.confirmEditIcon:hover {
+    color: lightblue;
+}
+
+.sidebarContainer input {
+    width: 19vw;
+    margin-top: 50px;
+}
+
+
+
+
+
+
+
+/*---------------*/
+/*----QUERIES----*/
+/*---------------*/
+
+
+/*--------------------*/
+/*------ 900 px ------*/
+@media only screen and (min-width: 900px){
+    .adminPageContainer {
+        padding-top: 60px;
+        display: grid;
+        grid-template-columns: 1fr 4fr 1fr
+    }
+
+    .adminPageContainer > div:nth-child(1) button{
+        margin-top: 45px;
+    }
+
+
+}

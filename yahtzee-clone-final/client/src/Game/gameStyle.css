@@ -1,0 +1,1083 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    font-size: 12px;
+    padding: 2px 5px;
+}
+
+button {
+    outline: none;
+}
+
+
+/*----------*/
+/*---GAME---*/
+/*----------*/
+.gameContainer {
+    background-color: #333;
+    height: 97.5vh;
+    padding-top: 10px;
+}
+
+.gameComplete {
+
+}
+
+.gameInProgress {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+
+}
+
+.enterHighScoreDiv {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1119;
+    color: white;
+    flex-direction: column;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.enterHighScoreDiv form {
+    margin-bottom: 90px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.enterHighScoreDiv input {
+    height: 30px;
+    width: 200px;
+    text-align: center;
+    text-transform: uppercase;
+    display: block;
+}
+
+.enterHighScoreDiv button {
+    margin: 10px 30px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    border: #333;
+    outline: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.enterHighScoreDiv button:hover {
+    background-color: #444;
+    transition: .3s;
+}
+
+.enterHighScoreDiv button:active {
+    background-color: #111;
+    transition: .1s;
+}
+
+/*---------------*/
+/*---SCORECARD---*/
+/*---------------*/
+.scorecardContainer {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #EAE7DC;
+    border: 1px solid #8E8D8A;
+    border-radius: 1px;
+    margin-top: 20px;
+}
+
+
+.questionIcon {
+    color: #1119;
+}
+
+.questionIcon:hover {
+    color: #333;
+    transition: .3s;
+}
+
+.howToPlayDiv {
+    height: 530px;
+    padding: 20px;
+}
+
+.scorecardContainer > div:nth-child(2) {
+    width: 100%;
+    position: absolute;
+    grid-row: 1;
+    flex-direction: column;
+    background-color: rgba(4, 3, 3, 0.83);
+    z-index: 1;
+    overflow-y: scroll;
+}
+
+.scorecardContainer > div:nth-child(2)::-webkit-scrollbar {
+    background-color: #333;
+    width: 15px;
+}
+
+.scorecardContainer > div:nth-child(2)::-webkit-scrollbar-thumb {
+    background-color: #EAE7DC;
+    border-radius: 2px;
+}
+
+.howToPlayDiv h1 {
+    margin: 15px 0;
+    color: white;
+    text-align: center;
+    padding: 10px 10px;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    text-transform: uppercase;
+}
+
+
+.howToPlayDiv p {
+    color: white;
+    font-size: 12px;
+    margin: 10px 0;
+}
+
+.howToPlayDiv span {
+    color: white;
+    margin-top: 10px;
+    border-bottom: 1px dashed white;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+.howToPlayIcon {
+    position: absolute;
+    grid-row: 1;
+    right: 3px;
+}
+
+
+/*---------------*/
+/*---DICEBOARD---*/
+/*---------------*/
+.diceboardContainer {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    padding: 0 2px;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    background-color: #314455;
+    border: 2px solid #644E5B;
+    border-radius: 1px;
+    -webkit-box-shadow: -1px 29px 45px 5px rgba(0,0,0,0.3);
+    -moz-box-shadow: -1px 29px 45px 5px rgba(0,0,0,0.3);
+    box-shadow: -1px 29px 45px 5px rgba(0,0,0,0.3);
+}
+
+.rollCountDiv {
+    font-size: 10px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dieContainer {
+    grid-column: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.dieContainer div {
+    height: 35px;
+    width: 35px;
+    border-radius: 6px;
+    margin: 5px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.diceDiv {
+    border: 1px solid #333;
+}
+
+.diceDiv img {
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px
+}
+
+.diceDiv:hover {
+    border: 2px solid #EAE7DC;
+    transition: .2s;
+}
+
+.rollBtnDiv {
+
+}
+
+.rollBtn {
+    height: 100%;
+    width: 100%;
+    font-size: 9px;
+    background-color: #F76C6C;
+    border: 1px solid #333;
+    outline: none;
+    color: white;
+    display: flex;
+    border-radius: 3px;
+    justify-content: center;
+    padding: 0;
+    transition: .3s;
+}
+
+.rollBtn:hover {
+    background-color: #b55a5c;
+    letter-spacing: .5px;
+}
+
+.rollBtn:active {
+    background-color: #644E5B;
+}
+
+
+
+
+/*---------------*/
+/*---SCORECARD---*/
+/*---------------*/
+.upperSectionDiv {
+    grid-column: 1;
+}
+
+.lowerSectionDiv {
+    grid-column: 2;
+}
+
+.upperSectionContainer,
+.lowerSectionContainer {
+    padding: 5px 2px;
+}
+
+.upperSectionContainer div,
+.lowerSectionContainer div {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.upperSectionContainer > div,
+.lowerSectionContainer > div {
+    border: 1px solid black;
+    margin: 4px 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #314455;
+    height: 35px;
+    padding: 2px;
+}
+
+
+.upperSectionContainer > div {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    -webkit-box-shadow: -2px 3px 4px 0px rgba(0,0,0,0.70);
+    -moz-box-shadow: -2px 3px 4px 0px rgba(0,0,0,0.70);
+    box-shadow: -2px 3px 4px 0px rgba(0,0,0,0.70);
+}
+
+.lowerSectionContainer > div {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    -webkit-box-shadow: 2px 3px 4px 0px rgba(0,0,0,0.61);
+    -moz-box-shadow: 2px 3px 4px 0px rgba(0,0,0,0.61);
+    box-shadow: 2px 3px 4px 0px rgba(0,0,0,0.61);
+}
+
+.upperSectionContainer > div:hover,
+.lowerSectionContainer > div:hover {
+    background-color: #333;
+    -webkit-box-shadow: 0px 10px 31px -5px rgba(0,0,0,0.80);
+    -moz-box-shadow: 0px 10px 31px -5px rgba(0,0,0,0.80);
+    box-shadow: 0px 10px 31px -5px rgba(0,0,0,0.80);
+    transition: .2s;
+}
+
+
+.upperSectionContainer h3,
+.lowerSectionContainer h3 {
+    margin: 0;
+    display: inline-block;
+    font-size: 9px;
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    width: 30px;
+    text-transform: uppercase;
+    color: white;
+    flex-wrap: wrap;
+    font-style: italic;
+}
+
+.upperSectionContainer h3 {
+    margin-left: 5px;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.lowerSectionContainer h3 {
+    margin-right: 15px;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+}
+
+.lowerSectionButtonsContainer {
+
+}
+
+.upperSaveBtnDiv,
+.lowerSaveBtnDiv {
+    margin: 2px 0;
+}
+
+.icon {
+    font-size: 18px;
+}
+
+.upperSaveBtnDiv button,
+.lowerSaveBtnDiv button {
+    width: 30px;
+    color: white;
+    font-size: 15px;
+    background-color: #97AABD;
+    border: none;
+    border-radius: 3px;
+    transition: background-color .4s;
+    border: 1px solid #97AABD;
+    position: absolute;
+}
+
+.upperSaveBtnDiv button:hover ,
+.lowerSaveBtnDiv button:hover {
+    background-color: #314455;
+    border: 1px solid #EAE7DC;
+}
+
+.yahtzeeTitleDiv {
+    grid-column: 1;
+    grid-row: 2;
+    margin-right: 7px;
+    transform: translateY(-22px);
+    background-color: #EAE7DC;
+    border: 2px solid #644E5B;
+    transition: .3s;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.yahtzeeTitleDiv h1 {
+    margin: 0;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    padding: 8px 3px;
+    margin-top: 2px;
+    font-style: italic;
+    justify-content: center;
+    letter-spacing: 1px;
+}
+
+.yahtzeeTitleDiv span {
+    font-size: 10px;
+    transform: translateY(2px);
+}
+
+.yahtzeeTitleDiv:hover {
+    background-color: #314455;
+}
+
+.yahtzeeTitleDiv h1:hover {
+    color: #EAE7DC;
+}
+
+.totalScoreDiv {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 2px;
+    border: 2px solid black;
+    border-radius: 3px;
+    background-color: #314455;
+    margin-left: 2px;
+}
+
+.totalScoreDiv h3 {
+    grid-column: 1;
+    margin: 0;
+    padding-left: 5px;
+    font-weight: lighter;
+    color: #EAE7DC;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.totalScoreDiv div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.totalScoreDiv span {
+    font-size: 25px;
+    font-weight: lighter;
+    color: #EAE7DC;
+    letter-spacing: 2px;
+}
+
+
+
+
+
+
+/*---------------*/
+/*----QUERIES----*/
+/*---------------*/
+/*--------------------*/
+/*------ 400 px ------*/
+@media only screen and (min-width: 400px){
+    .gameContainer {
+        padding-top: 20px;
+    }
+
+    .lowerSectionButtonsContainer span,
+    .upperSectionButtonsContainer span,
+    .yahtzeeBonusDisplay span,
+    .bonusDisplay span {
+        font-size: 20px;
+    }
+
+    .upperSectionContainer > div,
+    .lowerSectionContainer > div {
+        height: 40px;
+    }
+
+    .upperSectionContainer h3,
+    .lowerSectionContainer h3 {
+        font-size: 11px;
+
+    }
+
+    .upperSectionContainer h3 {
+        margin-left: 15px;
+        width: 30px;
+    }
+
+    .lowerSectionContainer h3 {
+        margin-right: 2px;
+        justify-content: flex-start;
+        flex-direction: row;
+        width: 55px;
+    }
+
+
+
+    .upperSaveBtnDiv button,
+    .lowerSaveBtnDiv button {
+        position: static;
+    }
+
+    .upperSaveBtnDiv {
+        margin-right: 5px;
+    }
+
+    .lowerSaveBtnDiv {
+        margin-left: 5px;
+    }
+
+    .yahtzeeTitleDiv h1 {
+        font-size: 20px;
+        letter-spacing: 1.5px;
+    }
+
+    .yahtzeeTitleDiv span {
+        font-size: 10px;
+        transform: translateY(3px);
+        letter-spacing: .5px;
+    }
+
+
+}
+
+/*--------------------*/
+/*------ 500 px ------*/
+@media only screen and (min-width: 500px){
+    .lowerSectionButtonsContainer span,
+    .upperSectionButtonsContainer span,
+    .yahtzeeBonusDisplay span,
+    .bonusDisplay span {
+        font-size: 23px;
+    }
+
+    .upperSectionContainer > div,
+    .lowerSectionContainer > div {
+        height: 45px;
+    }
+
+    .upperSectionContainer h3 {
+        margin-left: 20px;
+    }
+
+    .upperSectionContainer h3,
+    .lowerSectionContainer h3 {
+        font-size: 13px;
+        width: 85px;
+        font-weight: 400;
+        letter-spacing: 1.5px;
+    }
+
+    .lowerSectionContainer h3 {
+        margin-right: 2px;
+        justify-content: flex-start;
+        flex-direction: row;
+    }
+
+    .diceboardContainer {
+        height: 60px;
+    }
+
+    .dieContainer div {
+        height: 46px;
+        width: 46px;
+        font-size: 20px;
+        margin: 5px 10px;
+    }
+
+    .rollCountDiv {
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+
+    .rollBtn {
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-weight: 300;
+    }
+
+    .howToPlayDiv {
+        height: 590px;
+        padding: 20px 40px;
+    }
+
+    .howToPlayDiv h1 {
+        margin: 15px 0;
+        padding: 10px 10px;
+        font-size: 30px;
+        letter-spacing: 1px;
+    }
+
+
+    .howToPlayDiv p {
+        font-size: 14px;
+        font-weight: lighter;
+    }
+
+    .howToPlayDiv span {
+        letter-spacing: 1px;
+        font-size: 18px;
+    }
+
+    .yahtzeeTitleDiv {
+        transform: translateY(-22px);
+    }
+
+    .yahtzeeTitleDiv h1 {
+        margin: 0;
+        font-size: 25px;
+        padding: 8px 3px;
+        margin-top: 2px;
+        letter-spacing: 3px;
+    }
+
+    .yahtzeeTitleDiv span {
+        font-size: 12px;
+        transform: translateY(5px);
+        letter-spacing: 1px;
+    }
+
+    .diceDiv img {
+        border-radius: 6px
+    }
+
+}
+
+/*--------------------*/
+/*------ 600 px ------*/
+@media only screen and (min-width: 600px) {
+    .upperSectionContainer h3,
+    .lowerSectionContainer h3 {
+        font-size: 16px;
+        width: 140px;
+        font-weight: 400;
+        letter-spacing: 1.5px;
+    }
+
+    .diceboardContainer {
+        height: 65px;
+    }
+
+    .dieContainer div {
+        height: 50px;
+        width: 50px;
+        font-size: 24px;
+        margin: 5px 10px;
+    }
+
+    .rollBtnDiv {
+
+    }
+
+    .totalScoreDiv {
+        grid-template-columns: 3fr 2fr;
+    }
+
+    .totalScoreDiv h3 {
+        padding: 0;
+        font-weight: 400;
+        letter-spacing: 1px;
+    }
+
+    .howToPlayDiv {
+        height: 600px;
+    }
+
+    .yahtzeeTitleDiv {
+        transform: translateY(-24px);
+    }
+
+    .yahtzeeTitleDiv h1 {
+        font-size: 27px;
+        letter-spacing: 9px;
+    }
+
+    .diceDiv img {
+        border-radius: 7px
+    }
+
+}
+
+
+
+/*--------------------*/
+/*------ 700 px ------*/
+@media only screen and (min-width: 700px) {
+    .upperSectionContainer > div,
+    .lowerSectionContainer > div {
+        height: 50px;
+    }
+
+    .upperSectionContainer h3,
+    .lowerSectionContainer h3 {
+        font-size: 18px;
+        width: 180px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+
+    .diceboardContainer {
+        height: 90px;
+    }
+
+    .dieContainer div {
+        font-size: 30px;
+        font-weight: 600;
+        height: 74px;
+        width: 74px;
+        border-radius: 10px;
+    }
+
+    .rollBtn {
+        height: 90%;
+        margin-top: 5px;
+    }
+
+    .howToPlayDiv {
+        height: 680px;
+        padding: 20px 60px;
+    }
+
+    .howToPlayDiv h1 {
+        margin: 15px 0;
+        padding: 10px 10px;
+        font-size: 35px;
+        letter-spacing: 2px;
+    }
+
+
+    .howToPlayDiv p {
+        font-size: 16px;
+    }
+
+    .howToPlayDiv span {
+    letter-spacing: 1px;
+    }
+
+    .diceDiv img {
+        border-radius: 11px;
+    }
+
+    .yahtzeeTitleDiv span {
+        font-size: 14px;
+        transform: translateY(4px);
+        letter-spacing: 2px;
+    }
+
+}
+
+/*--------------------*/
+/*------ 750 px ------*/
+@media only screen and (min-width: 750px){
+    .upperSectionContainer h3,
+    .lowerSectionContainer h3 {
+        font-size: 19px;
+        width: 210px;
+        letter-spacing: 2.5px;
+    }
+
+    .yahtzeeTitleDiv {
+        transform: translateY(-26px);
+    }
+
+    .yahtzeeTitleDiv h1 {
+        font-size: 29px;
+        letter-spacing: 12px;
+    }
+
+}
+
+/*--------------------*/
+/*------ 850 px ------*/
+@media only screen and (min-width: 850px){
+    .upperSectionContainer h3,
+    .lowerSectionContainer h3 {
+        font-size: 20px;
+        width: 220px;
+        letter-spacing: 3px;
+    }
+
+}
+
+/*--------------------*/
+/*------ 900 px ------*/
+@media only screen and (min-width: 900px){
+    .gameContainer {
+        padding-top: 35px;
+    }
+
+    .gameCompleteDiceboard {
+
+    }
+
+    .scorecardContainer {
+        grid-column: 1 / 3;
+        grid-row: 2;
+        -webkit-box-shadow: -1px 5px 61px 4px rgba(0,0,0,0.88);
+        -moz-box-shadow: -1px 5px 61px 4px rgba(0,0,0,0.88);
+        box-shadow: -1px 5px 61px 4px rgba(0,0,0,0.88);
+    }
+
+    .upperSectionContainer > div,
+    .lowerSectionContainer > div {
+        height: 60px;
+    }
+
+    .upperSectionContainer h3,
+    .lowerSectionContainer h3 {
+        font-size: 20px;
+        width: 210px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+
+    .diceboardContainer {
+        grid-column: 3 / -1;
+        grid-row: 2;
+        padding: 0 2px;
+        display: flex;
+        flex-direction: column;
+        height: 673px;
+        background-color: #314455;
+        border: 1px solid #644E5B;
+        border-radius: 1px;
+        margin-top: 20px;
+        -webkit-box-shadow: 10px 5px 43px 4px rgba(0,0,0,0.70);
+        -moz-box-shadow: 10px 5px 43px 4px rgba(0,0,0,0.70);
+        box-shadow: 10px 5px 43px 4px rgba(0,0,0,0.70);
+    }
+
+    .dieContainer {
+        height: 575px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .dieContainer div {
+        /* height: 35px;
+        width: 35px; */
+        border-radius: 12px;
+        margin: 5px;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .rollCountDiv {
+        font-size: 15px;
+        color: #eee;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .rollBtn {
+        height: 70px;
+        margin-top: 5px;
+    }
+
+    .howToPlayIcon {
+        position: absolute;
+        grid-row: 1;
+        grid-column: 2;
+        right: 92px;
+    }
+
+    .yahtzeeTitleDiv {
+        transform: translateY(-30px);
+    }
+
+    .yahtzeeTitleDiv h1 {
+        font-size: 32px;
+        letter-spacing: 15px;
+    }
+
+    .yahtzeeTitleDiv span {
+        font-size: 14px;
+        transform: translateY(6px);
+        letter-spacing: 3px;
+    }
+
+}
+
+
+
+/*--------------------*/
+/*------ 1024 px ------*/
+@media only screen and (min-width: 1024px){
+    .upperSectionContainer > div,
+    .lowerSectionContainer > div {
+        height: 63px;
+    }
+
+    .upperSectionContainer h3,
+    .lowerSectionContainer h3 {
+        font-size: 24px;
+        width: 300px;
+        font-weight: 600;
+        letter-spacing: 3px;
+    }
+
+    .lowerSectionButtonsContainer span,
+    .upperSectionButtonsContainer span,
+    .yahtzeeBonusDisplay span,
+    .bonusDisplay span {
+        font-size: 27px;
+    }
+
+    .diceboardContainer {
+        height: 703px;
+    }
+
+    .dieContainer div {
+        font-size: 35px;
+        font-weight: lighter;
+    }
+
+    .dieContainer {
+        height: 605px;
+    }
+
+    .howToPlayDiv {
+        height: 705px;
+        padding: 20px 120px;
+    }
+
+
+
+    .howToPlayDiv h1 {
+        margin: 15px 0;
+        padding: 10px 10px;
+        font-size: 35px;
+        letter-spacing: 2px;
+    }
+
+
+    .howToPlayDiv p {
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .howToPlayDiv span {
+    letter-spacing: 1.5px;
+    font-size: 24px;
+    }
+
+    .yahtzeeTitleDiv {
+        transform: translateY(-32px);
+    }
+
+    .yahtzeeTitleDiv h1 {
+        font-size: 34px;
+        letter-spacing: 20px;
+    }
+
+}
+
+
+/*--------------------*/
+/*------ 1150 px ------*/
+@media only screen and (min-width: 1150px){
+    .gameContainer {
+        background-color: #333;
+        height: 104vh
+    }
+
+    .gameInProgress {
+        margin: 0 60px;
+    }
+
+    .diceboardContainer {
+        width: 116px;
+    }
+
+    .dieContainer div {
+        font-size: 40px;
+        height: 100px;
+        width: 100px;
+        border-radius: 15px;
+    }
+
+    .howToPlayIcon {
+        right: 180px;
+    }
+
+    .howToPlayDiv {
+        height: 700px;
+        padding: 20px;
+    }
+
+    .scorecardContainer > div:nth-child(2) {
+        width: 90vw;
+        position: absolute;
+        padding: 20px 120px;
+    }
+
+    .howToPlayDiv h1 {
+        margin: 15px 0;
+        padding: 10px 10px;
+        font-size: 35px;
+        letter-spacing: 2px;
+    }
+
+
+    .howToPlayDiv p {
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .howToPlayDiv span {
+        letter-spacing: 1.5px;
+        font-size: 24px;
+    }
+
+    .diceDiv img {
+        border-radius: 15px;
+    }
+
+}
+
+
+/*--------------------*/
+/*------ 1400 px ------*/
+@media only screen and (min-width: 1400px){
+    .gameInProgress {
+        margin: 0 140px;
+    }
+
+    .howToPlayIcon {
+        right: 260px;
+    }
+
+    .scorecardContainer > div:nth-child(2) {
+        width: 84vw;
+        position: absolute;
+        padding: 20px 140px;
+    }
+
+}
+
+/*--------------------*/
+/*------ 1600 px ------*/
+@media only screen and (min-width: 1600px){
+    .gameInProgress {
+        margin: 0 190px;
+    }
+
+    .howToPlayIcon {
+        transform: translateX(-100px);
+    }
+
+    .scorecardContainer > div:nth-child(2) {
+        width: 75vw;
+        position: absolute;
+    }
+
+}
+
+/*--------------------*/
+/*------ 1800 px ------*/
+@media only screen and (min-width: 1600px){
+    .gameInProgress {
+        margin: 0 250px;
+    }
+
+    .howToPlayIcon {
+        right: 270px;
+    }
+
+}
