@@ -107,11 +107,8 @@ class Section extends React.Component{
                         <div style={selected} onClick={this.handleSelected}>
                         {!this.state.isSelected ?
                             <div>
-
                             </div>
-
                         :
-
                             <div>
                                 {this.props.value >= 0 ?
                                     <span>{this.props.value}</span>
